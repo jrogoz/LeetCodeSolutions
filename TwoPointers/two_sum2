@@ -9,11 +9,13 @@ class Solution:
         """
 
         for i in range(len(numbers)):
-            rest = target - numbers[i]  # determine the second value 
+            # determine the second value 
+            rest = target - numbers[i]  
 
             if rest not in numbers:
                 continue
 
             for j in range(len(numbers)):
                 if numbers[j] == rest and j != i:
-                    return sorted([i+1, j+1])  # first number must be lower than the second
+                    # first number must be lower than the second
+                    return sorted([i+1, j+1])  
